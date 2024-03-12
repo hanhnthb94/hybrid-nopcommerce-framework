@@ -57,10 +57,9 @@ public class Lever_02_Apply_BasePage_01_Initial {
     public void TC_02_Login() {
         basePage.openUrl(driver,"https://demo.nopcommerce.com/");
         basePage.clickToElement(driver, "//a[@class='ico-login']");
-        basePage.senkeyToElement(driver, "//input[@id='Email']", emailAddress);
-        basePage.senkeyToElement(driver, "//input[@id='Password']", password);
+        basePage.senkeyToElement(driver, "//input[@id='Email']", "automationhanh@gmail.com");
+        basePage.senkeyToElement(driver, "//input[@id='Password']", "123456");
         basePage.clickToElement(driver, "//button[@class='button-1 login-button']");
-
         Assert.assertTrue(basePage.getElement(driver, "//a[@class='ico-account' and text()='My account']").isDisplayed());
     }
 

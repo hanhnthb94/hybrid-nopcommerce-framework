@@ -326,7 +326,10 @@ I
                 "return arguments[0].complete && typeof arguments[0].naturalWidth != 'undefined' && arguments[0].naturalWidth > 0", getElement(driver, xpathExpression));
     }
     public void waitForElementVisible(WebDriver driver, String xpathExpression) {
-        new WebDriverWait(driver, Duration.ofSeconds(15)).until(ExpectedConditions.visibilityOfElementLocated(getByXpath(xpathExpression)));
+        new WebDriverWait(driver, Duration.ofSeconds(5)).until(ExpectedConditions.visibilityOfElementLocated(getByXpath(xpathExpression)));
+    }
+    public void waitForElementClickable(WebDriver driver, String xpathExpression) {
+        new WebDriverWait(driver, Duration.ofSeconds(5)).until(ExpectedConditions.elementToBeClickable(getByXpath(xpathExpression)));
     }
     public void waitForListElementVisible(WebDriver driver, String xpathExpression) {
         new WebDriverWait(driver, Duration.ofSeconds(15)).until(ExpectedConditions.visibilityOfAllElementsLocatedBy(getByXpath(xpathExpression)));
