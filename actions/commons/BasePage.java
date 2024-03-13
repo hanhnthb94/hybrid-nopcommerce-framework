@@ -138,17 +138,13 @@ I
         return driver.findElements(getByXpath(xpathExpression));
     }
     public void clickToElement(WebDriver driver, String xpathExpression) {
-        // driver.findElement(By.xpath(xpathExpression)).click();
         getElement(driver, xpathExpression).click();
     }
     public void senkeyToElement(WebDriver driver, String xpathExpression, String valueToSendkey) {
-        // driver.findElement(By.xpath(xpathExpression)).clear();
-        // driver.findElement(By.xpath(xpathExpression)).sendKeys(valueToSendkey);
-        getElement(driver, xpathExpression).clear();
+        // getElement(driver, xpathExpression).clear();
         getElement(driver, xpathExpression).sendKeys(valueToSendkey);
     }
     public String getElementText(WebDriver driver, String xpathExpression) {
-        // driver.findElement(By.xpath(xpathExpression)).click();
         return getElement(driver, xpathExpression).getText();
     }
 

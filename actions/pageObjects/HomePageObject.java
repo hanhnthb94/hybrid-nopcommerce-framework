@@ -6,7 +6,7 @@ import org.openqa.selenium.WebElement;
 import pageUIs.HomPageUI;
 
 public class HomePageObject extends BasePage {
-    WebDriver driver;
+    private WebDriver driver;
 
     public HomePageObject(WebDriver driver) {
         this.driver = driver;
@@ -35,12 +35,12 @@ public class HomePageObject extends BasePage {
     }
 
     public WebElement getMyAccountLink() {
-        // waitForElementVisible(driver, HomPageUI.MY_ACCOUNT_LINK);
+        waitForElementVisible(driver, HomPageUI.MY_ACCOUNT_LINK);
         return getElement(driver, HomPageUI.MY_ACCOUNT_LINK);
     }
 
     public void clickToMyAccountLink() {
-        // waitForElementVisible(driver, HomPageUI.MY_ACCOUNT_LINK);
+        waitForElementVisible(driver, HomPageUI.MY_ACCOUNT_LINK);
         clickToElement(driver, HomPageUI.MY_ACCOUNT_LINK);
     }
 }

@@ -65,13 +65,14 @@ public class Lever_03_Page_Object_Pattern {
         loginPage.enterEmailTextbox(emailAddress);
         loginPage.enterPasswordTextbox(password);
         loginPage.clickToLoginButton();
-        homePage = new HomePageObject(driver);
         Assert.assertTrue(homePage.getMyAccountLink().isDisplayed());
     }
 
     @Test
     public void TC_03_MyAccount() {
+
         // automationhanh@gmail.com/123456
+        homePage = new HomePageObject(driver);
         homePage.clickToMyAccountLink();
         customerPage = new CustomerPageObject(driver);
         Assert.assertTrue(customerPage.getGender().isSelected());
