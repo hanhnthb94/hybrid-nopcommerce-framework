@@ -29,19 +29,19 @@ public class CustomerPageObject extends BasePage {
         return getElementAttribute(driver, CustomerPageUI.LAST_NAME_TEXTBOX, "value");
     }
 
-    public String getBirthDayAttributeValue() {
+    public String getBirthDaySelected() {
         waitForElementVisible(driver, CustomerPageUI.BIRTH_DAY_SELECT);
-        return getElementAttribute(driver, CustomerPageUI.BIRTH_DAY_SELECT, "value");
+        return getFirstSelectOption(driver, CustomerPageUI.BIRTH_DAY_SELECT);
     }
 
-    public String getMonthDayAttributeValue() {
+    public String getMonthDaySelected() {
         waitForElementVisible(driver, CustomerPageUI.BIRTH_MONTH_SELECT);
-        return getElementAttribute(driver, CustomerPageUI.BIRTH_MONTH_SELECT, "value");
+        return getFirstSelectOption(driver, CustomerPageUI.BIRTH_MONTH_SELECT);
     }
 
-    public String getYearDayAttributeValue() {
+    public String getYearDaySelected() {
         waitForElementVisible(driver, CustomerPageUI.BIRTH_YEAR_SELECT);
-        return getElementAttribute(driver, CustomerPageUI.BIRTH_YEAR_SELECT, "value");
+        return getFirstSelectOption(driver, CustomerPageUI.BIRTH_YEAR_SELECT);
     }
 
     public String getEmailAttributeValue() {
