@@ -34,12 +34,12 @@ public class CustomerPageObject extends BasePage {
         return getFirstSelectOption(driver, CustomerPageUI.BIRTH_DAY_SELECT);
     }
 
-    public String getMonthDaySelected() {
+    public String getBirthMonthSelected() {
         waitForElementVisible(driver, CustomerPageUI.BIRTH_MONTH_SELECT);
         return getFirstSelectOption(driver, CustomerPageUI.BIRTH_MONTH_SELECT);
     }
 
-    public String getYearDaySelected() {
+    public String getBirthYearSelected() {
         waitForElementVisible(driver, CustomerPageUI.BIRTH_YEAR_SELECT);
         return getFirstSelectOption(driver, CustomerPageUI.BIRTH_YEAR_SELECT);
     }

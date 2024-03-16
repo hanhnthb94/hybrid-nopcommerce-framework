@@ -27,17 +27,17 @@ public class RegisterPageObject extends BasePage {
 
     public void selectBirthDay(String birthDay) {
         waitForElementVisible(driver, RegisterPageUI.BIRTH_DAY_SELECT);
-        isDropdownMultiple(driver, RegisterPageUI.BIRTH_DAY_SELECT);
+        selectDropdown(driver, RegisterPageUI.BIRTH_DAY_SELECT, birthDay);
     }
 
     public void selectBirthMonth(String birthMonth) {
         waitForElementVisible(driver, RegisterPageUI.BIRTH_MONTH_SELECT);
-        isDropdownMultiple(driver, RegisterPageUI.BIRTH_MONTH_SELECT);
+        selectDropdown(driver, RegisterPageUI.BIRTH_MONTH_SELECT, birthMonth);
     }
 
     public void selectBirthYear(String birthYear) {
         waitForElementVisible(driver, RegisterPageUI.BIRTH_YEAR_SELECT);
-        isDropdownMultiple(driver, RegisterPageUI.BIRTH_YEAR_SELECT);
+        selectDropdown(driver, RegisterPageUI.BIRTH_YEAR_SELECT, birthYear);
     }
 
     public void enterEmailTextbox(String emailAddress) {

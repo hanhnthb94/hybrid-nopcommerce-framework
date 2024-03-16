@@ -1,31 +1,27 @@
 package com.nopcommerce.users;
 
-import commons.BasePage;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
+import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
-import pageObjects.CustomerPageObject;
-import pageObjects.HomePageObject;
-import pageObjects.LoginPageObject;
-import pageObjects.RegisterPageObject;
+import pageFactory.*;
 
 import java.time.Duration;
 import java.util.Random;
-
 import static org.testng.Assert.assertEquals;
 
-public class Lever_03_Page_Object_Pattern {
+public class Lever_05_Page_Factory extends BasePageFactory {
     private WebDriver driver;
     private HomePageObject homePage;
     private RegisterPageObject registerPage;
     private LoginPageObject loginPage;
     private CustomerPageObject customerPage;
-    String firstName = "Automation", lastName = "FC", emailAddress = getEmailAddress(), password = "123456";
-    String company = "Selenium WebDrive";
-    String birthDay = "15", birthMonth = "November", birthYear = "1999";
+    private String firstName = "Automation", lastName = "FC", emailAddress = getEmailAddress(), password = "123456";
+    private String company = "Selenium WebDrive";
+    private String birthDay = "15", birthMonth = "November", birthYear = "1999";
 
     @BeforeClass
     public void beforeClass() {
@@ -38,15 +34,12 @@ public class Lever_03_Page_Object_Pattern {
         homePage = new HomePageObject(driver);
         homePage.clickToRegisterLink();
         registerPage = new RegisterPageObject(driver);
-
         registerPage.clickToGenderButton();
         registerPage.enterFirstNameTextbox(firstName);
         registerPage.enterLastNameTextbox(lastName);
-
         registerPage.selectBirthDay(this.birthDay);
         registerPage.selectBirthMonth(this.birthMonth);
         registerPage.selectBirthYear(this.birthYear);
-
         registerPage.enterEmailTextbox(emailAddress);
         registerPage.enterCompanyTextbox(company);
         registerPage.enterPasswordTextbox(password);
@@ -88,7 +81,6 @@ public class Lever_03_Page_Object_Pattern {
     }
 
     public String getEmailAddress() {
-        // Ham lay ra email random
         Random rand = new Random();
         return "automation" + rand.nextInt(99999) + "@gmail.com";
     }

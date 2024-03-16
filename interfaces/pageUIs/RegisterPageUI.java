@@ -21,19 +21,6 @@ public class RegisterPageUI {
     public static final String EMAIL_TEXTBOX = "//input[@id='Email']";
     public static final String PASSWORD_TEXTBOX = "//input[@id='Password']";
     public static final String CONFIRM_PASSWORD_TEXTBOX = "//input[@id='ConfirmPassword']";
-
     public static final String HOMEPAGE_LOGO_IMAGE = "//div[@class='header-logo']//img";
-
-
-
-
-
-
-
-
-
-
-
-
 
 }
