@@ -1,6 +1,7 @@
 package pageObjects;
 
 import commons.BasePage;
+import commons.PageGeneratorManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import pageUIs.HomPageUI;
@@ -24,14 +25,16 @@ public class HomePageObject extends BasePage {
         // => Gọi khởi tạo đến hàm class cha
         // Nếu class hiện tại ko kế thừa class nào hết thì mặc định nó sẽ cho kế thừa class object
 
-    public void clickToRegisterLink() {
+    public RegisterPageObject clickToRegisterLink() {
         waitForElementClickable(driver, HomPageUI.REGISTER_LINK);
         clickToElement(driver, HomPageUI.REGISTER_LINK);
+        return PageGeneratorManager.getRegisterPage(driver);
     }
 
-    public void clickToLoginLink() {
+    public LoginPageObject clickToLoginLink() {
         waitForElementClickable(driver, HomPageUI.LOGIN_LINK);
         clickToElement(driver, HomPageUI.LOGIN_LINK);
+        return PageGeneratorManager.getLoginPage(driver);
     }
 
     public WebElement getMyAccountLink() {
@@ -39,9 +42,10 @@ public class HomePageObject extends BasePage {
         return getElement(driver, HomPageUI.MY_ACCOUNT_LINK);
     }
 
-    public void clickToMyAccountLink() {
+    public CustomerPageObject clickToMyAccountLink() {
         waitForElementVisible(driver, HomPageUI.MY_ACCOUNT_LINK);
         clickToElement(driver, HomPageUI.MY_ACCOUNT_LINK);
+        return PageGeneratorManager.getCustomerPage(driver);
     }
 }
 

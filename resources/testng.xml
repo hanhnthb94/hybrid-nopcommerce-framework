@@ -1,9 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite parallel="false" name="NopCommerce UI - Automation Testing">
+    <parameter name="userUrl" value="https://demo.nopcommerce.com/" />
+    <parameter name="adminUrl" value="https://admin-demo.nopcommerce.com/" />
     <test name="Run on Firefox browser">
+        <parameter name="browser" value="Firefox" />
         <classes>
-            <class name="com.nopcommerce.users.Lever_05_Page_Factory" />
+            <class name="com.nopcommerce.users.Lever_06_Page_Generator_01" />
+            <class name="com.nopcommerce.users.Lever_06_Page_Generator_02" />
+            <class name="com.nopcommerce.users.Lever_06_Page_Generator_03" />
         </classes>
     </test>
 </suite>
