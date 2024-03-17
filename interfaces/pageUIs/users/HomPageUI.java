@@ -1,4 +1,4 @@
-package pageUIs;
+package pageUIs.users;
 
 public class HomPageUI {
     // public: Truy cap tu cac class ben ngoai package theo cach thong thuong

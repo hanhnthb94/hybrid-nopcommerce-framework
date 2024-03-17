@@ -1,16 +1,14 @@
 package pageObjects;
 
-import commons.BasePage;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import pageUIs.CustomerPageUI;
+import pageUIs.users.CustomerPageUI;
 
-import java.time.temporal.ChronoUnit;
-
-public class CustomerPageObject extends BasePage {
+public class CustomerPageObject extends SideBarMyAccountPageObject {
     private WebDriver driver;
 
     public CustomerPageObject(WebDriver driver) {
+        super(driver);
         this.driver = driver;
     }
 
@@ -53,4 +51,6 @@ public class CustomerPageObject extends BasePage {
         waitForElementVisible(driver, CustomerPageUI.COMPANY_TEXTBOX);
         return getElementAttribute(driver, CustomerPageUI.COMPANY_TEXTBOX, "value");
     }
+
+
 }

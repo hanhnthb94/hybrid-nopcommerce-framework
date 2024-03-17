@@ -3,9 +3,7 @@ package pageObjects;
 import commons.BasePage;
 import commons.PageGeneratorManager;
 import org.openqa.selenium.WebDriver;
-import pageUIs.HomPageUI;
-import pageUIs.LoginPageUI;
-import pageUIs.RegisterPageUI;
+import pageUIs.users.LoginPageUI;
 
 public class LoginPageObject extends BasePage {
     private WebDriver driver;
@@ -26,4 +24,10 @@ public class LoginPageObject extends BasePage {
         return PageGeneratorManager.getHomePage(driver);
     }
 
+    public HomePageObject loginAsUser(String emailAddress, String password) {
+        enterEmailTextbox(emailAddress);
+        enterPasswordTextbox(password);
+        clickToLoginButton();
+        return PageGeneratorManager.getHomePage(driver);
+    }
 }

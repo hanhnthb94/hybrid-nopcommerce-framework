@@ -2,6 +2,7 @@ package commons;
 
 import org.openqa.selenium.WebDriver;
 import pageObjects.*;
+import pageUIs.admin.AdminDashboardPageUI;
 
 public class PageGeneratorManager {
 
@@ -19,6 +20,18 @@ public class PageGeneratorManager {
     }
     public static AdminLoginPageObject getAdminLoginPage(WebDriver driver) {
         return new AdminLoginPageObject(driver);
+    }
+    public static DownloadableProductPageObject getDownloadableProductPage(WebDriver driver) {
+        return new DownloadableProductPageObject(driver);
+    }
+    public static AddressesPageObject getAddressesPage(WebDriver driver) {
+        return new AddressesPageObject(driver);
+    }
+    public static RewardPointPageObject getRewardPointPage(WebDriver driver) {
+        return new RewardPointPageObject(driver);
+    }
+    public static AdminDashboardPageObject getAdminDashboardPage(WebDriver driver) {
+        return new AdminDashboardPageObject(driver);
     }
 
 }

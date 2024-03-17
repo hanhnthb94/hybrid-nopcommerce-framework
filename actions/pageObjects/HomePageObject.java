@@ -4,7 +4,7 @@ import commons.BasePage;
 import commons.PageGeneratorManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import pageUIs.HomPageUI;
+import pageUIs.users.HomPageUI;
 
 public class HomePageObject extends BasePage {
     private WebDriver driver;

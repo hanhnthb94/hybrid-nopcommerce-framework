@@ -6,9 +6,7 @@
     <test name="Run on Firefox browser">
         <parameter name="browser" value="Firefox" />
         <classes>
-            <class name="com.nopcommerce.users.Lever_06_Page_Generator_01" />
-            <class name="com.nopcommerce.users.Lever_06_Page_Generator_02" />
-            <class name="com.nopcommerce.users.Lever_06_Page_Generator_03" />
+            <class name="com.nopcommerce.users.Lever_09_Switch_Site_Url" />
         </classes>
     </test>
 </suite>

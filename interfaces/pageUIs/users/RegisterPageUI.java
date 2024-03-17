@@ -1,4 +1,4 @@
-package pageUIs;
+package pageUIs.users;
 
 import java.util.Random;
 

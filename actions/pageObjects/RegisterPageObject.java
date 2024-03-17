@@ -3,7 +3,7 @@ package pageObjects;
 import commons.BasePage;
 import commons.PageGeneratorManager;
 import org.openqa.selenium.WebDriver;
-import pageUIs.RegisterPageUI;
+import pageUIs.users.RegisterPageUI;
 
 public class RegisterPageObject extends BasePage {
     private WebDriver driver;

@@ -1,4 +1,4 @@
-package pageUIs;
+package pageUIs.users;
 
 public class CustomerPageUI {
     public static final String GENDER_MALE_RADIO = "//input[@id='gender-male']";
@@ -9,4 +9,5 @@ public class CustomerPageUI {
     public static final String BIRTH_YEAR_SELECT = "//select[@name='DateOfBirthYear']";
     public static final String COMPANY_TEXTBOX = "//input[@id='Company']";
     public static final String EMAIL_TEXTBOX = "//input[@id='Email']";
+
 }
