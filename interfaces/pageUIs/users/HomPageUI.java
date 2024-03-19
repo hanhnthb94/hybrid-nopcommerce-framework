@@ -14,7 +14,7 @@ public class HomPageUI {
     // Cu phap XPath
     // Khong can khoi tao 1 doi tuong dai dien cho class do de truy cap toi
     // Goi den 1 class khac package thi can phia import
-    public static final String REGISTER_LINK = "//a[@class='ico-register']";
-    public static final String LOGIN_LINK = "//a[@class='ico-login']";
-    public static final String MY_ACCOUNT_LINK = "//a[@class='ico-account' and text()='My account']";
+    public static final String REGISTER_LINK = "xpath=//a[@class='ico-register']";
+    public static final String LOGIN_LINK = "xpath=//a[@class='ico-login']";
+    public static final String MY_ACCOUNT_LINK = "xpath=//a[@class='ico-account' and text()='My account']";
 }

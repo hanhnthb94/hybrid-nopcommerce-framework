@@ -33,5 +33,8 @@ public class PageGeneratorManager {
     public static AdminDashboardPageObject getAdminDashboardPage(WebDriver driver) {
         return new AdminDashboardPageObject(driver);
     }
+    public static OrdersPageObject getOrdersPage(WebDriver driver) {
+        return new OrdersPageObject(driver);
+    }
 
 }
