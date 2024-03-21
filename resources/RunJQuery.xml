@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite parallel="none" name="DataTable - DataGrid">
+    <parameter name="url" value="https://www.jqueryscript.net/demo/CRUD-Data-Grid-Plugin-jQuery-Quickgrid/" />
+    <test name="Run on Firefox browser">
+        <parameter name="browser" value="Firefox" />
+        <classes>
+            <class name="com.jquery.table.Lever_13_Handle_DataTable" />
+        </classes>
+    </test>
+</suite>

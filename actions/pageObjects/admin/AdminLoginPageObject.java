@@ -1,9 +1,8 @@
-package pageObjects;
+package pageObjects.admin;
 
 import commons.BasePage;
 import commons.PageGeneratorManager;
 import org.openqa.selenium.WebDriver;
-import pageUIs.admin.AdminDashboardPageUI;
 import pageUIs.admin.AdminLoginPageUI;
 
 public class AdminLoginPageObject extends BasePage {
@@ -22,13 +21,13 @@ public class AdminLoginPageObject extends BasePage {
     public void inputToEmailTextbox(String emailAddres) {
         waitForElementInvisible(driver, AdminLoginPageUI.EMAIL_TEXTBOX);
         getElement(driver, AdminLoginPageUI.EMAIL_TEXTBOX).clear();
-        senkeyToElement(driver, AdminLoginPageUI.EMAIL_TEXTBOX, emailAddres);
+        sendkeyToElement(driver, AdminLoginPageUI.EMAIL_TEXTBOX, emailAddres);
     }
 
     public void inputPasswordTextbox(String password) {
         waitForElementInvisible(driver, AdminLoginPageUI.PASSWORD_TEXTBOX);
         getElement(driver, AdminLoginPageUI.PASSWORD_TEXTBOX).clear();
-        senkeyToElement(driver, AdminLoginPageUI.PASSWORD_TEXTBOX, password);
+        sendkeyToElement(driver, AdminLoginPageUI.PASSWORD_TEXTBOX, password);
     }
 
     public AdminDashboardPageObject clickToLoginButton() {

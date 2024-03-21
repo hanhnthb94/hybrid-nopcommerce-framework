@@ -15,6 +15,8 @@ public class GlobalConstants {
 
     public static final String DEV_USER_URL = "https://demo.nopcommerce.com/";
     public static final String DEV_ADMIN_URL = "https://admin-demo.nopcommerce.com/";
+    public static final String PANDA_USER_URL = "http://live.techpanda.org/";
+    public static final String PANDA_ADMIN_URL = "http://live.techpanda.org/index.php/backendlogin";
     public static final long SHORT_TIMEOUT = 5;
     public static final long LONG_TIMEOUT = 30;
     public static final String DEV_ADMIN_USERNAME = "admin@yourstore.com";

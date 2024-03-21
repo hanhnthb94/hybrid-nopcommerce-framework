@@ -1,4 +1,4 @@
-package pageObjects;
+package pageObjects.user;
 
 import commons.BasePage;
 import commons.PageGeneratorManager;
@@ -18,12 +18,12 @@ public class RegisterPageObject extends BasePage {
     }
     public void enterFirstNameTextbox(String firstName) {
         waitForElementVisible(driver, RegisterPageUI.FIRST_NAME_TEXTBOX);
-        senkeyToElement(driver, RegisterPageUI.FIRST_NAME_TEXTBOX, firstName);
+        sendkeyToElement(driver, RegisterPageUI.FIRST_NAME_TEXTBOX, firstName);
     }
 
     public void enterLastNameTextbox(String lastName) {
         waitForElementVisible(driver, RegisterPageUI.LAST_NAME_TEXTBOX);
-        senkeyToElement(driver, RegisterPageUI.LAST_NAME_TEXTBOX, lastName);
+        sendkeyToElement(driver, RegisterPageUI.LAST_NAME_TEXTBOX, lastName);
     }
 
     public void selectBirthDay(String birthDay) {
@@ -43,22 +43,22 @@ public class RegisterPageObject extends BasePage {
 
     public void enterEmailTextbox(String emailAddress) {
         waitForElementVisible(driver, RegisterPageUI.EMAIL_TEXTBOX);
-        senkeyToElement(driver, RegisterPageUI.EMAIL_TEXTBOX, emailAddress);
+        sendkeyToElement(driver, RegisterPageUI.EMAIL_TEXTBOX, emailAddress);
     }
 
     public void enterCompanyTextbox(String company) {
         waitForElementVisible(driver, RegisterPageUI.COMPANY_TEXTBOX);
-        senkeyToElement(driver, RegisterPageUI.COMPANY_TEXTBOX, company);
+        sendkeyToElement(driver, RegisterPageUI.COMPANY_TEXTBOX, company);
     }
 
     public void enterPasswordTextbox(String password) {
         waitForElementVisible(driver, RegisterPageUI.PASSWORD_TEXTBOX);
-        senkeyToElement(driver, RegisterPageUI.PASSWORD_TEXTBOX, password);
+        sendkeyToElement(driver, RegisterPageUI.PASSWORD_TEXTBOX, password);
     }
 
     public void enterConfirmPasswordTextbox(String password) {
         waitForElementVisible(driver, RegisterPageUI.CONFIRM_PASSWORD_TEXTBOX);
-        senkeyToElement(driver, RegisterPageUI.CONFIRM_PASSWORD_TEXTBOX, password);
+        sendkeyToElement(driver, RegisterPageUI.CONFIRM_PASSWORD_TEXTBOX, password);
     }
 
     public void clickToRegisterButton() {

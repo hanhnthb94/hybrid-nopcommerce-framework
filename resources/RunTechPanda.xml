@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite parallel="none" name="DataTable - DataGrid">
+    <parameter name="userUrl" value="http://live.techpanda.org/" />
+    <parameter name="adminUrl" value="http://live.techpanda.org/index.php/backendlogin" />
+    <test name="Run on Firefox browser">
+        <parameter name="browser" value="Firefox" />
+        <classes>
+            <class name="com.techpanda.Lever_13_Handle_DataTable_Exercise" />
+        </classes>
+    </test>
+</suite>

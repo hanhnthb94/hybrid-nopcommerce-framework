@@ -7,7 +7,8 @@ import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
-import pageObjects.*;
+import pageObjects.admin.AdminLoginPageObject;
+import pageObjects.user.*;
 import pageUIs.users.BasePageUI;
 
 import java.time.Duration;
@@ -126,6 +127,14 @@ public class BasePage {
     public List<WebElement> getListElement(WebDriver driver, String locator) {
         return driver.findElements(getByLocator(locator));
     }
+
+    public List<WebElement> getListElement(WebDriver driver, String locator, String... restParams) {
+        return driver.findElements(getByLocator(getDynamicLocator(locator, restParams)));
+    }
+
+    public int getListElementSize(WebDriver driver, String locator, String... restParams) {
+        return getListElement(driver, getDynamicLocator(locator, restParams)).size();
+    }
     public void clickToElement(WebDriver driver, String locator) {
         getElement(driver, locator).click();
     }
@@ -134,12 +143,12 @@ public class BasePage {
         getElement(driver, getDynamicLocator(locator, restParams)).click();
     }
 
-    public void senkeyToElement(WebDriver driver, String locator, String valueToSendkey, String... restParams) {
+    public void sendkeyToElement(WebDriver driver, String locator, String valueToSendkey, String... restParams) {
         getElement(driver, getDynamicLocator(locator, restParams)).clear();
         getElement(driver, getDynamicLocator(locator, restParams)).sendKeys(valueToSendkey);
     }
 
-    public void senkeyToElement(WebDriver driver, String locator, String valueToSendkey) {
+    public void sendkeyToElement(WebDriver driver, String locator, String valueToSendkey) {
         getElement(driver, locator).clear();
         getElement(driver, locator).sendKeys(valueToSendkey);
     }
@@ -152,6 +161,9 @@ public class BasePage {
     }
     public void selectDropdown(WebDriver driver, String locator, String itemText) {
         new Select(getElement(driver, locator)).selectByVisibleText(itemText);
+    }
+    public void selectDropdown(WebDriver driver, String locator, String itemText, String... restParams) {
+        new Select(getElement(driver, getDynamicLocator(locator, restParams))).selectByVisibleText(itemText);
     }
     public String getFirstSelectOption(WebDriver driver, String locator) {
         return new Select(getElement(driver, locator)).getFirstSelectedOption().getText();
@@ -220,6 +232,11 @@ public class BasePage {
     public void uncheckToCheckbox(WebDriver driver, String locator) {
         if(getElement(driver, locator).isSelected()) {
             getElement(driver, locator).click();
+        }
+    }
+    public void checkToElement(WebDriver driver, String locator, String... restParams) {
+        if(!getElement(driver, getDynamicLocator(locator, restParams)).isSelected()) {
+            getElement(driver, getDynamicLocator(locator, restParams)).click();
         }
     }
     public  boolean isElementDisplayed(WebDriver driver, String locator) {

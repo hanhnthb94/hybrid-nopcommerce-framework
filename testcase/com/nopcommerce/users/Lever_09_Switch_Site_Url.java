@@ -8,7 +8,12 @@ import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
-import pageObjects.*;
+import pageObjects.admin.AdminDashboardPageObject;
+import pageObjects.admin.AdminLoginPageObject;
+import pageObjects.user.CustomerPageObject;
+import pageObjects.user.HomePageObject;
+import pageObjects.user.LoginPageObject;
+import pageObjects.user.RegisterPageObject;
 
 import static org.testng.Assert.assertEquals;
 

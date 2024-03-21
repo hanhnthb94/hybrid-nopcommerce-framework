@@ -1,8 +1,9 @@
 package commons;
 
 import org.openqa.selenium.WebDriver;
-import pageObjects.*;
-import pageUIs.admin.AdminDashboardPageUI;
+import pageObjects.admin.AdminDashboardPageObject;
+import pageObjects.admin.AdminLoginPageObject;
+import pageObjects.user.*;
 
 public class PageGeneratorManager {
 

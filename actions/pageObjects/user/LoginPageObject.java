@@ -1,4 +1,4 @@
-package pageObjects;
+package pageObjects.user;
 
 import commons.BasePage;
 import commons.PageGeneratorManager;
@@ -12,11 +12,11 @@ public class LoginPageObject extends BasePage {
     }
     public void enterEmailTextbox(String emailAddress) {
         waitForElementVisible(driver, LoginPageUI.EMAIL_TEXTBOX);
-        senkeyToElement(driver, LoginPageUI.EMAIL_TEXTBOX, emailAddress);
+        sendkeyToElement(driver, LoginPageUI.EMAIL_TEXTBOX, emailAddress);
     }
     public void enterPasswordTextbox(String password) {
         waitForElementVisible(driver, LoginPageUI.PASSWORD_TEXTBOX);
-        senkeyToElement(driver, LoginPageUI.PASSWORD_TEXTBOX, password);
+        sendkeyToElement(driver, LoginPageUI.PASSWORD_TEXTBOX, password);
     }
     public HomePageObject clickToLoginButton() {
         waitForElementClickable(driver, LoginPageUI.LOGIN_BUTTON);

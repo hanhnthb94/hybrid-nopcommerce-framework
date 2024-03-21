@@ -35,18 +35,18 @@ public class Lever_02_Apply_BasePage_01_Initial {
         basePage.clickToElement(driver, "//a[@class='ico-register']");
 
         basePage.clickToElement(driver, "//input[@id='gender-male']");
-        basePage.senkeyToElement(driver, "//input[@id='FirstName']", firstName);
-        basePage.senkeyToElement(driver, "//input[@id='LastName']", lastName);
+        basePage.sendkeyToElement(driver, "//input[@id='FirstName']", firstName);
+        basePage.sendkeyToElement(driver, "//input[@id='LastName']", lastName);
 
         basePage.selectDropdown(driver, "//select[@name='DateOfBirthDay']", this.day);
         basePage.selectDropdown(driver, "//select[@name='DateOfBirthMonth']", this.month);
         basePage.selectDropdown(driver, "//select[@name='DateOfBirthYear']", this.year);
 
         // driver.findElement(By.cssSelector("#Email")).sendKeys(emailAddress);
-        basePage.senkeyToElement(driver, "//input[@id='Email']", emailAddress);
-        basePage.senkeyToElement(driver, "//input[@id='Company']", company);
-        basePage.senkeyToElement(driver, "//input[@id='Password']", password);
-        basePage.senkeyToElement(driver, "//input[@id='ConfirmPassword']", password);
+        basePage.sendkeyToElement(driver, "//input[@id='Email']", emailAddress);
+        basePage.sendkeyToElement(driver, "//input[@id='Company']", company);
+        basePage.sendkeyToElement(driver, "//input[@id='Password']", password);
+        basePage.sendkeyToElement(driver, "//input[@id='ConfirmPassword']", password);
         basePage.clickToElement(driver, "//button[@id='register-button']");
 
         assertEquals(basePage.getElementText(driver, "//div[@class='result']"), "Your registration completed");
@@ -57,8 +57,8 @@ public class Lever_02_Apply_BasePage_01_Initial {
     public void TC_02_Login() {
         basePage.openUrl(driver,"https://demo.nopcommerce.com/");
         basePage.clickToElement(driver, "//a[@class='ico-login']");
-        basePage.senkeyToElement(driver, "//input[@id='Email']", "automationhanh@gmail.com");
-        basePage.senkeyToElement(driver, "//input[@id='Password']", "123456");
+        basePage.sendkeyToElement(driver, "//input[@id='Email']", "automationhanh@gmail.com");
+        basePage.sendkeyToElement(driver, "//input[@id='Password']", "123456");
         basePage.clickToElement(driver, "//button[@class='button-1 login-button']");
         Assert.assertTrue(basePage.getElement(driver, "//a[@class='ico-account' and text()='My account']").isDisplayed());
     }
