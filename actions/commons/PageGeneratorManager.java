@@ -3,6 +3,8 @@ package commons;
 import org.openqa.selenium.WebDriver;
 import pageObjects.admin.AdminDashboardPageObject;
 import pageObjects.admin.AdminLoginPageObject;
+import pageObjects.jquery.UploadPageObject;
+import pageObjects.techpanda.TechPandaPageObject;
 import pageObjects.user.*;
 
 public class PageGeneratorManager {
@@ -37,5 +39,13 @@ public class PageGeneratorManager {
     public static OrdersPageObject getOrdersPage(WebDriver driver) {
         return new OrdersPageObject(driver);
     }
+    public static UploadPageObject getUploadPageObject(WebDriver driver) {
+        return new UploadPageObject(driver);
+    }
+    public static TechPandaPageObject getTechPandaObject(WebDriver driver) {
+        return new TechPandaPageObject(driver);
+    }
+
+
 
 }

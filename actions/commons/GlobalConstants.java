@@ -1,5 +1,7 @@
 package commons;
 
+import java.io.File;
+
 public class GlobalConstants {
     // Server Url: DEV/ Testing/ Staging/ Product
     // Database: DEV/ Testing/ Staging/ Product
@@ -22,6 +24,6 @@ public class GlobalConstants {
     public static final String DEV_ADMIN_USERNAME = "admin@yourstore.com";
     public static final String DEV_ADMIN_PASSWORD = "admin";
     public static final String RELATIVE_PROJECT_PATH = System.getProperty("user.dir");
-    public static final String UPLOAD_PATH = RELATIVE_PROJECT_PATH + "/uploadFiles";
-    public static final String DOWNLOAD_PATH = RELATIVE_PROJECT_PATH + "/downloadFiles";
+    public static final String UPLOAD_PATH = RELATIVE_PROJECT_PATH + File.separator + "uploadFiles" + File.separator;
+    public static final String DOWNLOAD_PATH = RELATIVE_PROJECT_PATH + File.separator + "downloadFiles" + File.separator;
 }

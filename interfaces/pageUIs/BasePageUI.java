@@ -1,4 +1,4 @@
-package pageUIs.users;
+package pageUIs;
 
 import commons.BasePage;
 import org.openqa.selenium.WebDriver;
@@ -10,4 +10,5 @@ public class BasePageUI  {
     public static final String CUSTOMER_INFOR_PAGE_LINK = "xpath=//div[@class='listbox']//a[text()='Customer info']";
     public static final String USER_LOGOUT_LINK = "xpath=//a[text()='Log out']";
     public static final String ADMIN_LOGOUT_LINK = "xpath=//a[text()='Logout']";
+    public static final String UPLOAD_FILE_TYPE = "xpath=//input[@type='file']";
 }
