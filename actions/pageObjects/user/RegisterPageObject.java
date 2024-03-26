@@ -76,4 +76,13 @@ public class RegisterPageObject extends BasePage {
         clickToElement(driver, RegisterPageUI.HOMEPAGE_LOGO_IMAGE);
         return PageGeneratorManager.getHomePage(driver);
     }
+
+    public String getFirstNameErrorMessageText() {
+        waitForElementVisible(driver, RegisterPageUI.FIRSTNAME_ERROR_MESSAGE);
+        return getElementText(driver, RegisterPageUI.FIRSTNAME_ERROR_MESSAGE);
+    }
+    public String getLastNameErrorMessageText() {
+        waitForElementVisible(driver, RegisterPageUI.LASTNAME_ERROR_MESSAGE);
+        return getElementText(driver, RegisterPageUI.LASTNAME_ERROR_MESSAGE);
+    }
 }

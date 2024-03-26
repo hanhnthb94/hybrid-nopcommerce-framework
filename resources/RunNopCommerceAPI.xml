@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite parallel="none" name="NopCommerce UI - Automation Testing">
+    <parameter name="userUrl" value="https://demo.nopcommerce.com/" />
+    <parameter name="adminUrl" value="https://admin-demo.nopcommerce.com/" />
+    <listeners>
+        <listener class-name="commons.MethodListener" />
+        <listener class-name="org.uncommons.reportng.HTMLReporter" />
+        <listener class-name="org.uncommons.reportng.JUnitXMLReporter" />
+    </listeners>
+    <test name="Payment Test Suite">
+        <parameter name="browser" value="Firefox" />
+        <classes>
+            <class name="com.nopcommerce.users.Lever_15_Assert_Verify" />
+        </classes>
+    </test>
+    <test name="User  Test Suite">
+        <parameter name="browser" value="Firefox" />
+        <classes>
+            <class name="com.nopcommerce.users.Lever_15_Assert_Verify" />
+        </classes>
+    </test>
+</suite>

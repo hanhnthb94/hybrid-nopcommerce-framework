@@ -13,5 +13,8 @@
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" name="selenium-testng" level="project" />
     <orderEntry type="library" name="testng-7.9.0-sources" level="project" />
+    <orderEntry type="library" name="log4j-api-2.19.0" level="project" />
+    <orderEntry type="library" name="commons-collections-3.2.1" level="project" />
+    <orderEntry type="library" name="extentreports-5.1.0" level="project" />
   </component>
 </module>
