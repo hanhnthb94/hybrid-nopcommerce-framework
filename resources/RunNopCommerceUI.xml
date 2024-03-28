@@ -5,12 +5,12 @@
     <parameter name="adminUrl" value="https://admin-demo.nopcommerce.com/" />
     <listeners>
         <listener class-name="commons.MethodListener" />
-        <listener class-name="reportConfigs.ExtentTestListener" />
+        <listener class-name="reportConfigs.AllureTestListener" />
     </listeners>
     <test name="Run on Firefox browser">
         <parameter name="browser" value="Firefox" />
         <classes>
-            <class name="com.nopcommerce.users.Lever_18_Extent_V5" />
+            <class name="com.nopcommerce.users.Lever_19_Allure_Report" />
         </classes>
     </test>
 </suite>
